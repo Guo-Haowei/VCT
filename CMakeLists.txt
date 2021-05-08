@@ -14,14 +14,10 @@ add_subdirectory(external/glfw)
 message("Configuring glad...")
 add_subdirectory(external/glad)
 
-# glm
-message("Configuring glm...")
-include_directories(external/glm/)
-
 # three.math
 message("Configuring three.math...")
-add_subdirectory(external/three.math)
-include_directories(${PROJECT_SOURCE_DIR}/external/three.math/include/)
+add_subdirectory(source/math)
+include_directories(${PROJECT_SOURCE_DIR}/source/math/include)
 
 add_definitions(-DDATA_DIR="${CMAKE_SOURCE_DIR}/data/")
 
